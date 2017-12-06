@@ -1,10 +1,18 @@
 module Models exposing (..)
 
+import Rps exposing (..)
+
+
+type Scene
+    = Start
+    | NowPlaying
+    | Over
+
 
 type alias Model =
-    { left : Int, right : Int, count : Int }
+    { you : Hand, enemy : Hand, scene : Scene }
 
 
 initialModel : Model
 initialModel =
-    { left = 0, right = 0, count = 0 }
+    { you = Rock, enemy = Rock, scene = Start }
