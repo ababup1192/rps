@@ -1,0 +1,8 @@
+@startuml
+
+[*] -> Start 
+Start --> NowPlaying : NextGame
+NowPlaying --> Over : SelectYourHand
+Over --> NowPlaying : NextGame
+
+@enduml
