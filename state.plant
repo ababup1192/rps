@@ -2,7 +2,12 @@
 
 [*] -> Start 
 Start --> NowPlaying : NextGame
-NowPlaying --> Over : SelectYourHand
 Over --> NowPlaying : NextGame
+
+state NowPlaying {
+  [*] -> Initial
+  Initial -> SelectedYourHand : SelectYourHand
+  SelectedYourHand -> Over : SelectEnemyHand 
+}
 
 @enduml

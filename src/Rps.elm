@@ -1,4 +1,4 @@
-module Rps exposing (Result(..), Hand(..), fight)
+module Rps exposing (Result(..), Hand(..), fight, toHand)
 
 
 type Result
